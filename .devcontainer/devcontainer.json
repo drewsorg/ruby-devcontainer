@@ -1,0 +1,9 @@
+{
+  "name": "codespaces-test",
+  "dockerComposeFile": "compose.yaml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "forwardPorts": [3000],
+  "postAttachCommand": "ruby -run -e httpd . -p 3000",
+  "postCreateCommand": "gem install webrick"
+}
